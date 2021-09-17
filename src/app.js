@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,6 +14,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+exports.__esModule = true;
 //Basic data types
 var id = 5;
 var company = "sri";
@@ -22,7 +24,6 @@ var x;
 //Arrays
 var ids = [1, 2, 3];
 var arr = [1, true, 'hi'];
-console.log(arr[1]);
 //Tuples
 var tup = [1, 'hello', true];
 //Tuple Array
@@ -33,7 +34,6 @@ employee = [
 ];
 //Union
 var pid;
-pid = '22';
 //Enum
 //By default values will start from 0
 var directions;
@@ -63,7 +63,7 @@ var user = {
 };
 //Type Assertion
 var cid = 1;
-// let customerId = <number>cid
+//let customerId = <number>cid
 var customerId = cid;
 //Functions
 function addNum(x, y) {
@@ -104,7 +104,6 @@ var Person1 = /** @class */ (function () {
     return Person1;
 }());
 var sri1 = new Person1(1, 'sri');
-console.log(sri1.register());
 var Person2 = /** @class */ (function () {
     function Person2(id, name) {
         this.id = id;
@@ -140,3 +139,19 @@ function getArray1(items) {
 var numArray1 = getArray1([1, 2, 3]);
 var strArray1 = getArray1(['s', 'k', 'm']);
 //numArray1.push('hello') //We wont be able to push string to numArray1 since we used generics
+//Loops
+var someArr = [1, 'sri', true];
+for (var _i = 0, someArr_1 = someArr; _i < someArr_1.length; _i++) {
+    var entry = someArr_1[_i];
+    //console.log(entry)
+}
+var numbers = [1, 2, 3, 4];
+for (var i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 == 0) {
+        //console.log(numbers[i])
+    }
+}
+//Import class from another file
+var index_1 = require("./index");
+var obj = new index_1.student();
+console.log(obj.add(1, 5));

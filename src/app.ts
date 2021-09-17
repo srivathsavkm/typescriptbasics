@@ -130,7 +130,7 @@ class Person1 {
 
 const sri1 = new Person1(1, 'sri')
 
-console.log(sri1.register()) 
+//console.log(sri1.register()) 
 
 //Implement Interface with Class
 interface PersonInterface {
@@ -183,3 +183,24 @@ let numArray1 = getArray1<number>([1,2,3])
 let strArray1 = getArray1<string>(['s','k','m'])
 
 //numArray1.push('hello') //We wont be able to push string to numArray1 since we used generics
+
+
+//Loops
+let someArr = [1, 'sri', true]
+
+for(let entry of someArr){
+    //console.log(entry)
+}
+
+var numbers = [1,2,3,4]
+for(var i=0;i<numbers.length;i++){
+    if(numbers[i] % 2 == 0){
+        //console.log(numbers[i])
+    }
+}
+
+//Import class from another file
+import {student} from './index'
+
+let obj = new student()
+console.log(obj.add(1, 5))
